@@ -3,8 +3,8 @@
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 2px rgba(111, 12, 0, 1);
-    -webkit-box-shadow: inset 0 0 2px rgba(111, 12, 0, 1);
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 255, 1);
     border-radius: 4px;
 }
 
@@ -25,39 +25,212 @@ ul {
     padding: 0;
 }
 
+.page_wrap {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
 .wrapper {
     width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 100px 4fr 8fr;
+    grid-template-columns: 90px 4fr 8fr;
+    align-items: center;
 }
 
-.side-menu {}
+.details {
+    padding: 10px 20px;
+    height: 70vh;
+    background-color: aquamarine;
+    overflow-y: scroll;
+    border-radius: 0 5px 5px 0;
+}
 
 .card {}
 
 .details {}
 
+/* menu styling */
+
+#sidebar {
+    background: white;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+}
+
+#sidebar>ul {}
+
+li.side-menu {
+    padding: 24px 10px;
+    color: blueviolet;
+    text-align: center;
+    position: relative;
+}
+
+.menu-text {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* card styling */
+
+.user-img {
+    background: #c5cae9;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-img>img {
+    width: 100%;
+    height: 400px;
+}
+
+.title p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+}
+
 /* media query */
 
-@media screen and (min-width: 320px) {}
+/* mobile styling */
+@media screen and (min-width: 320px) and (max-width: 524px) {
+    /* 480 - 523   */
+    .wrapper {
+        width: 80%;
+        grid-template-columns: 12fr;
+    }
+    .menu {
+        margin-bottom: 2px;
+    }
+    #sidebar {
+        margin: 0;
+        border-radius: 0;
+    }
+    #sidebar>ul {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+    }
+    .menu-icon {
+        /* display: inline-block; */
+    }
+    .menu-text {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    li.side-menu {
+        padding: 10px;
+    }
+    .user-card {
+        margin-bottom: 10px;
+    }
+    .user-img {
+        border-radius: 0;
+    }
+    .details {
+        border-radius: 0 0 5px 5px;
+    }
+}
 
-@media screen and (min-width: 480px) {}
+@media screen and (min-width: 524px) and (max-width: 640px) {
+    /* 524 - 639  */
+    .wrapper {
+        width: 60%;
+        grid-template-columns: 12fr;
+    }
+    .menu {
+        margin-bottom: 2px;
+    }
+    #sidebar {
+        margin: 0;
+        border-radius: 0;
+    }
+    #sidebar>ul {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+    }
+    .menu-icon {
+        /* display: inline-block; */
+    }
+    .menu-text {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    li.side-menu {
+        padding: 10px;
+    }
+    .user-card {
+        margin-bottom: 10px;
+    }
+    .user-img {
+        border-radius: 0;
+    }
+    .details {
+        border-radius: 0 0 5px 5px;
+    }
+}
 
-@media screen and (min-width: 524px) {}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    /* 640 - 767  */
+    .wrapper {
+        width: 60%;
+        grid-template-columns: 12fr;
+    }
+    .menu {
+        margin-bottom: 2px;
+    }
+    #sidebar {
+        margin: 0;
+        border-radius: 0;
+    }
+    #sidebar>ul {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+    }
+    .menu-icon {
+        /* display: inline-block; */
+    }
+    .menu-text {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    li.side-menu {
+        padding: 10px;
+    }
+    .user-card {
+        margin-bottom: 10px;
+    }
+    .user-img {
+        border-radius: 0;
+    }
+    .details {
+        border-radius: 0 0 5px 5px;
+    }
+}
 
-/* mobile styleing */
+/* tab styling */
 
-@media screen and (min-width: 640px) {}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     /* 768 - 991 */
+    .wrapper {
+        width: 98%;
+        grid-template-columns: 90px 4fr 8fr;
+    }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1023px) {
     /* 992 - 1023 */
+    .wrapper {
+        width: 95%;
+        grid-template-columns: 90px 4fr 8fr;
+    }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
     /* > 1024  */
 }

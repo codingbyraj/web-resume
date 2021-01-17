@@ -77,15 +77,9 @@ export default {
 .user-card {
   background: #fafafa;
   border-radius: 5px;
-  box-shadow: 3px 0px 8px #ccc;
+  /* box-shadow: 3px 0px 8px #ccc; */
 }
 
-.user-img {
-  background: #c5cae9;
-  border-radius: 5px 5px 0 0;
-  position: relative;
-  overflow: hidden;
-}
 .user-img::before {
   content: "";
   position: absolute;
@@ -113,18 +107,6 @@ export default {
   -webkit-transform: rotate(-8deg);
   -moz-transform: rotate(-8deg);
   -o-transform: rotate(-8deg);
-}
-
-.user-img > img {
-  width: 100%;
-  height: 400px;
-}
-
-.title p {
-  text-align: center;
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 16px;
 }
 
 /* bottom-section styling */

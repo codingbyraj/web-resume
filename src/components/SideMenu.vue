@@ -2,36 +2,36 @@
   <div id="sidebar">
     <ul>
       <li class="side-menu">
-        <a href="">
+        <router-link to="/">
           <div class="menu-icon">
             <font-awesome-icon :icon="['fas', 'coffee']" />
           </div>
-          <p>About</p>
-        </a>
+          <p class="menu-text">About</p>
+        </router-link>
       </li>
       <li class="side-menu">
-        <a href="">
+        <router-link to="/skills">
           <div class="menu-icon">
             <font-awesome-icon :icon="['fas', 'coffee']" />
           </div>
-          <p>Skills</p>
-        </a>
+          <p class="menu-text">Skills</p>
+        </router-link>
       </li>
       <li class="side-menu">
-        <a href="">
+        <router-link to="/profile">
           <div class="menu-icon">
             <font-awesome-icon :icon="['fas', 'coffee']" />
           </div>
-          <p>Profile</p>
-        </a>
+          <p class="menu-text">Profile</p>
+        </router-link>
       </li>
       <li class="side-menu">
-        <a href="">
+        <router-link to="/contact">
           <div class="menu-icon">
             <font-awesome-icon :icon="['fas', 'coffee']" />
           </div>
-          <p>Contact</p>
-        </a>
+          <p class="menu-text">Contact</p>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -42,19 +42,6 @@ export default {
 };
 </script>
 <style scoped>
-#sidebar {
-  background: white;
-  border-radius: 5px;
-  margin: 0 10px 0 0;
-}
-
-ul li.side-menu {
-  padding: 24px 10px;
-  color: blueviolet;
-  text-align: center;
-  position: relative;
-}
-
 ul li.side-menu:not(:first-child):before {
   content: "";
   position: absolute;
