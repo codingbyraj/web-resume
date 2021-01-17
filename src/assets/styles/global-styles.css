@@ -215,7 +215,7 @@ li.side-menu {
 
 /* tab styling */
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 767px) and (max-width: 992px) {
     /* 768 - 991 */
     .wrapper {
         width: 98%;
@@ -223,7 +223,7 @@ li.side-menu {
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1023px) {
+@media screen and (min-width: 992px) and (max-width: 1024px) {
     /* 992 - 1023 */
     .wrapper {
         width: 95%;
