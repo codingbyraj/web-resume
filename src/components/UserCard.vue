@@ -1,7 +1,7 @@
 <template>
   <div class="user-card">
     <div class="user-img">
-      <img src="@/assets/images/1.png" alt="oops! Image is not available" />
+      <!-- <img src="@/assets/images/1.png" alt="oops! Image is not available" /> -->
     </div>
     <div class="bottom-section">
       <div class="title">

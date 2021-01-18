@@ -66,8 +66,9 @@ export default {
 <style>
 .typewriter h3 {
   text-align: center;
-  color: cornflowerblue;
-  font-size: 14px;
+  font-size: 16px;
+  color: var(--color-parrot);
+  letter-spacing: 0.5px;
 }
 
 #txt-rotate > .wrap {
