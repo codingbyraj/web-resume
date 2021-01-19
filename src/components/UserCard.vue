@@ -22,7 +22,7 @@
         <ul>
           <li>
             <a href="https://github.com/codingbyraj" target="_blank">
-              <font-awesome-icon :icon="['fas', 'coffee']" class="github" />
+              <i class="fab fa-github github"></i>
             </a>
           </li>
           <li>
@@ -30,17 +30,17 @@
               href="https://www.linkedin.com/in/raj-abhishek-raj"
               target="_blank"
             >
-              <font-awesome-icon :icon="['fas', 'coffee']" class="linkedin" />
+              <i class="fab fa-linkedin linkedin"></i>
             </a>
           </li>
           <li>
             <a href="https://twitter.com/ABHISHEKRAJ58" target="_blank">
-              <font-awesome-icon :icon="['fas', 'coffee']" class="twitter" />
+              <i class="fab fa-twitter-square twitter"></i>
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/rai.abhishekraj" target="_blank">
-              <font-awesome-icon :icon="['fas', 'coffee']" class="facebook" />
+              <i class="fab fa-facebook facebook"></i>
             </a>
           </li>
         </ul>
@@ -67,8 +67,8 @@ export default {
   },
   data() {
     return {
-      dataPeriod: 2000,
-      dataRotate: ["Web Developer.", "Software Developer."],
+      dataPeriod: 1000,
+      dataRotate: ["Web Developer.", "Software Engineer."],
     };
   },
 };
@@ -153,6 +153,7 @@ export default {
 }
 
 .social-profile ul li {
+  font-size: 20px;
 }
 
 .icon {
@@ -179,13 +180,13 @@ export default {
 }
 .extended-option p {
   text-align: center;
+  color: var(--color-blue);
 }
 
 .extended-detail {
   transition: 0.3s;
 }
 .extended-detail:hover {
-  color: blueviolet;
   cursor: pointer;
   transition: 0.3s;
 }

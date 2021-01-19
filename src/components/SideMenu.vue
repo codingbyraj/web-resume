@@ -4,7 +4,7 @@
       <li class="side-menu">
         <router-link to="/">
           <div class="menu-icon">
-            <font-awesome-icon :icon="['fas', 'coffee']" />
+            <i class="far fa-address-book"></i>
           </div>
           <p class="menu-text">About</p>
         </router-link>
@@ -12,7 +12,7 @@
       <li class="side-menu">
         <router-link to="/skills">
           <div class="menu-icon">
-            <font-awesome-icon :icon="['fas', 'coffee']" />
+            <i class="fas fa-adjust"></i>
           </div>
           <p class="menu-text">Skills</p>
         </router-link>
@@ -20,7 +20,7 @@
       <li class="side-menu">
         <router-link to="/profile">
           <div class="menu-icon">
-            <font-awesome-icon :icon="['fas', 'coffee']" />
+            <i class="fas fa-adjust"></i>
           </div>
           <p class="menu-text">Profile</p>
         </router-link>
@@ -28,7 +28,8 @@
       <li class="side-menu">
         <router-link to="/contact">
           <div class="menu-icon">
-            <font-awesome-icon :icon="['fas', 'coffee']" />
+            <i class="far fa-envelope"></i>
+            <!-- <i class="far fa-envelope-open"></i> -->
           </div>
           <p class="menu-text">Contact</p>
         </router-link>

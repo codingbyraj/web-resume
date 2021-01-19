@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p>skills</p>
+  <div class="section-details">
+    <h2 class="section-heading">Skills</h2>
   </div>
 </template>
 <script>

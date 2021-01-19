@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <p>Profile</p>
+  <div class="section-details">
+    <h2 class="section-heading">Profile</h2>
   </div>
 </template>
 <script>

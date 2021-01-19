@@ -1,6 +1,6 @@
 <template>
   <div class="section-details">
-    <h2>About</h2>
+    <h2 class="section-heading">About</h2>
     <p>
       I am someone who is mature and candid. Everyday, I work to improve myself
       and my skills which is part of maturing and becoming better at what I do.
