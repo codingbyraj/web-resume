@@ -1,8 +1,6 @@
 <template>
   <div class="user-card">
-    <div class="user-img">
-      <!-- <img src="@/assets/images/1.png" alt="oops! Image is not available" /> -->
-    </div>
+    <div class="user-img"></div>
     <div class="bottom-section">
       <div class="title">
         <p>Hi 👋, This is Abhishek Raj</p>
@@ -49,10 +47,15 @@
       <!-- download cv / contact me option -->
       <div class="extended-option">
         <div class="extended-detail cv">
-          <p>Download CV</p>
+          <p>
+            Download CV <i class="fas fa-cloud-download-alt"></i>
+            <a :href="cvUrl" download="Abhishek_Raj.pdf"> </a>
+          </p>
         </div>
-        <div class="extended-detail contact-me">
-          <p>Contact Me</p>
+        <div class="extended-detail contact-me" @click="goToContact">
+          <p>
+            <span> Contact Me <i class="fas fa-paper-plane"></i> </span>
+          </p>
         </div>
       </div>
     </div>
@@ -69,17 +72,17 @@ export default {
     return {
       dataPeriod: 1000,
       dataRotate: ["Web Developer.", "Software Engineer."],
+      cvUrl: require("../assets/resume/Abhishek_Raj.pdf"),
     };
+  },
+  methods: {
+    goToContact() {
+      if (this.$route.path != "/contact") this.$router.push("contact");
+    },
   },
 };
 </script>
 <style scoped>
-.user-card {
-  background: #fafafa;
-  border-radius: 5px;
-  /* box-shadow: 3px 0px 8px #ccc; */
-}
-
 .user-img::before {
   content: "";
   position: absolute;
@@ -184,10 +187,13 @@ export default {
 }
 
 .extended-detail {
-  transition: 0.3s;
+  text-align: center;
+}
+.extended-detail > p {
+  cursor: pointer;
+  display: inline-block;
 }
 .extended-detail:hover {
-  cursor: pointer;
   transition: 0.3s;
 }
 

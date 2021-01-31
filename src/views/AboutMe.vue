@@ -1,43 +1,150 @@
 <template>
   <div class="section-details">
     <h2 class="section-heading">About</h2>
-    <p>
-      I am someone who is mature and candid. Everyday, I work to improve myself
-      and my skills which is part of maturing and becoming better at what I do.
-      I am someone who is mature and candid. Everyday, I work to improve myself
-      and my skills which is part of maturing and becoming better at what I do.
-    </p>
-
-    <p>
-      I am passionate about new technologies, new ideas and new ways of
-      thinking. I am someone who is mature and candid. Everyday, I work to
-      improve myself and my skills which is part of maturing and becoming better
-      at what I do.
-    </p>
-
-    <p>
-      I am someone who is mature and candid. Everyday, I work to improve myself
-      and my skills which is part of maturing and becoming better at what I do.
-      I am someone who is mature and candid. Everyday, I work to improve myself
-      and my skills which is part of maturing and becoming better at what I do.
-    </p>
-
-    <p>
-      I am passionate about new technologies, new ideas and new ways of
-      thinking.
-    </p>
-    <p>
-      I am someone who is mature and candid. Everyday, I work to improve myself
-      and my skills which is part of maturing and becoming better at what I do.
-    </p>
+    <div class="about-detail">
+      <!-- about me -->
+      <div class="about-me">
+        <p>
+          I'm Abhishek Raj, Software Developer from Delhi, India, specialised in
+          frontend and backend development for complex scalable web apps. I
+          write about software development on my blog.
+        </p>
+        <p>
+          Academically speaking, I hold a masters degree in Computer Science.
+        </p>
+        <h4 class="head2">What I do</h4>
+        <p>
+          I have more than 3 years' experience building software for clients all
+          over the world. Below is a quick overview of my main technical skill
+          sets and technologies I use. Want to find out more about my experience
+          and work? Click
+          <a
+            class="download-resume"
+            :href="cvUrl"
+            download="Abhishek_Raj.pdf"
+            >here
+          </a>
+          to download my resume.
+        </p>
+        <!-- <p>
+          If you wanna talk or share a cup of coffee, please shoot me a message
+          <router-link class="link" to="/contact">here</router-link>.
+        </p> -->
+      </div>
+      <div class="skillset">
+        <div class="skill" title="JavaScript">
+          <i class="fa-5x skill-icon-js fab fa-js-square"></i>
+        </div>
+        <div class="skill" title="Angular">
+          <i class="fa-5x skill-icon-angular fab fa-angular"></i>
+        </div>
+        <div class="skill" title="Vuejs">
+          <i class="fa-5x skill-icon-vue fab fa-vuejs"></i>
+        </div>
+        <div class="skill" title="Createjs">
+          <img :src="createjsImgUrl" alt="" />
+        </div>
+        <div class="skill" title="Nodejs">
+          <i class="fa-5x skill-icon-node fab fa-node"></i>
+        </div>
+        <div class="skill" title="NPM">
+          <i class="fa-5x skill-icon-npm fab fa-npm"></i>
+        </div>
+        <div class="skill" title="HTML5">
+          <i class="fa-5x skill-icon-html fab fa-html5"></i>
+        </div>
+        <div class="skill" title="CSS3">
+          <i class="fa-5x skill-icon-css fab fa-css3-alt"></i>
+        </div>
+        <div class="skill" title="Git">
+          <i class="fa-5x skill-icon-git fas fa-code-branch"></i>
+        </div>
+        <div class="skill" title="MongoDB">
+          <img :src="mongodbImgUrl" alt="" />
+        </div>
+        <div class="skill" title="SQL DB">
+          <img :src="sqldbImgUrl" alt="" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
+// import ContactView from "../components/ContactView.vue";
+
 export default {
   name: "AboutMe",
+  components: {
+    // ContactView,
+  },
+  data() {
+    return {
+      phoneIcon: '<i class="fas fa-phone-alt"></i>',
+      mailIcon: '<i class="fas fa-envelope-open-text"></i>',
+      addressIcon: '<i class="fas fa-map-marker-alt"></i>',
+      address: "Noida, India",
+      mailAddress: "dev@iabhishekraj.in",
+      phoneNumber: "+91-8287598404",
+      createjsImgUrl: require("@/assets/images/createjs-logopng.png"),
+      mongodbImgUrl: require("@/assets/images/mongo.png"),
+      sqldbImgUrl: require("@/assets/images/sql.png"),
+      cvUrl: require("@/assets/resume/Abhishek_Raj.pdf"),
+    };
+  },
 };
 </script>
 <style scoped>
 .section-details {
+}
+.about-detail {
+  /* display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-template-rows: 1fr; */
+}
+
+.my-details {
+  /* padding: 25px 10px; */
+}
+
+.link {
+  cursor: pointer;
+  color: var(--color-blue);
+}
+.about-me p {
+  text-align: justify;
+  font-size: 17px;
+}
+.download-resume {
+  color: var(--color-blue);
+}
+
+.skill-icon-angular {
+  color: #ca3327;
+}
+.skill-icon-vue {
+  color: #42b883;
+}
+.skill-icon-node {
+  color: #3c873a;
+}
+.skill-icon-js {
+  color: #f0db4f;
+}
+.skill-icon-npm {
+  color: #cc3534;
+}
+.skill-icon-html {
+  color: #e44d26;
+}
+.skill-icon-css {
+  /* color: #50B6F2; */
+  color: #02699c;
+}
+.skill-icon-git {
+  color: #f14e32;
+}
+.skill img {
+  width: 5em;
+  height: 5em;
 }
 </style>

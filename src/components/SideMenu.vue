@@ -4,7 +4,7 @@
       <li class="side-menu">
         <router-link to="/">
           <div class="menu-icon">
-            <i class="far fa-address-book"></i>
+            <i class="fas fa-user"></i>
           </div>
           <p class="menu-text">About</p>
         </router-link>
@@ -14,13 +14,14 @@
           <div class="menu-icon">
             <i class="fas fa-adjust"></i>
           </div>
-          <p class="menu-text">Skills</p>
+          <p class="menu-text">Projects</p>
         </router-link>
       </li>
       <li class="side-menu">
         <router-link to="/profile">
           <div class="menu-icon">
-            <i class="fas fa-adjust"></i>
+            <i class="fas fa-id-badge"></i>
+            <!-- <i class="far fa-id-badge"></i> -->
           </div>
           <p class="menu-text">Profile</p>
         </router-link>
@@ -28,8 +29,7 @@
       <li class="side-menu">
         <router-link to="/contact">
           <div class="menu-icon">
-            <i class="far fa-envelope"></i>
-            <!-- <i class="far fa-envelope-open"></i> -->
+            <i class="fas fa-paper-plane"></i>
           </div>
           <p class="menu-text">Contact</p>
         </router-link>

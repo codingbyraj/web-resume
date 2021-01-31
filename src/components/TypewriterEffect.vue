@@ -19,9 +19,6 @@ export default {
   },
   props: ["dataPeriod", "dataRotate"],
   methods: {
-    showPropsData() {
-      console.log(this.dataPeriod, this.dataRotate);
-    },
     runEffect() {
       var i = this.loopNum % this.dataRotate.length;
       var fullTxt = this.dataRotate[i];
@@ -69,6 +66,7 @@ export default {
   font-size: 16px;
   color: var(--color-parrot);
   letter-spacing: 0.5px;
+  font-weight: 500;
 }
 
 #txt-rotate > .wrap {

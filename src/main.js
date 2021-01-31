@@ -7,9 +7,7 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-
 
 library.add(fas);
 library.add(fab);
@@ -17,10 +15,11 @@ library.add(far);
 dom.watch();
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
-
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   render: h => h(App),
-}).$mount('#app')
+}).$mount('#app');
+
+console.log("Hi, \n\nI would love to connect with you. \nJust drop your message at 'hey@iabhishekraj.in' if you wanna share a cup of tea with me.\n\nRegards,\nAbhishek Raj");

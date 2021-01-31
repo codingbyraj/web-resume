@@ -42,20 +42,23 @@
       <!-- message -->
       <div class="row">
         <div class="form-group">
-          <button
-            type="submit"
-            class="btn-submit"
-            @click="submit"
-          >
+          <button type="submit" class="btn-submit" @click="submit">
             Submit
           </button>
         </div>
       </div>
       <!-- </form> -->
     </div>
-    <!-- maps -->
-    <div id="map">
-
+    <!-- mail -->
+    <div class="mail-me">
+      <p>
+        Or just drop a
+        <i class="fas fa-envelope-open-text mail-icon"></i>
+        mail @ 
+        <a class="mail-link" href="mailto:dev@iabhishekraj.in"
+          >hey@iabhishekraj.in</a
+        >
+      </p>
     </div>
   </div>
 </template>
@@ -63,14 +66,10 @@
 export default {
   name: "Contact",
   data() {
-    return {
-
-    };
+    return {};
   },
   methods: {
-    submit() {
-      
-    },
+    submit() {},
   },
 };
 </script>
@@ -137,6 +136,7 @@ textarea {
   border-radius: 4px;
   display: block;
   border: none;
+  cursor: pointer;
 }
 
 .btn-submit:hover {
@@ -144,9 +144,22 @@ textarea {
   color: #fff;
   text-decoration: none;
 }
+.mail-me {
+  font-size: 16px;
+  text-align: center;
+}
+
+.mail-icon {
+  color: var(--color-blue);
+}
+
+.mail-link {
+  color: var(--color-blue);
+  cursor: pointer;
+}
 
 /* map */
-#map{
+#map {
   height: 400px;
   padding: 10px 19px 2px 10px;
   box-shadow: 0 0 2px var(--color-blue);
