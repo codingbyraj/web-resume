@@ -3,7 +3,7 @@
     <h2 class="section-heading">Profile</h2>
     <!-- Experience -->
     <div class="experience">
-      <p>Experience <i class="timeline-icon fas fa-briefcase"></i></p>
+      <p class="section__para">Experience <i class="timeline-icon fas fa-briefcase"></i></p>
       <div class="timeline__wrapper">
         <div v-for="data in experienceData" :key="data.id">
           <TimeLine :TimeLineDetail="data" />
@@ -13,7 +13,7 @@
 
     <!-- Education -->
     <div class="education">
-      <p>
+      <p class="section__para">
         Education <i class="timeline-icon fas fa-user-graduate"></i>
         <!-- <i class="timeline-icon fas fa-graduation-cap"></i> -->
       </p>
@@ -72,7 +72,7 @@ export default {
         },
         {
           id: 1,
-          CompanyName: "G. G. S. Indraprastha University",
+          CompanyName: "Punjab Technical University",
           Title: "Graduation",
           TileLine: "2014",
           Information: ["Tenure : 2011 - 2014"],

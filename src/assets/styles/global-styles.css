@@ -90,10 +90,16 @@ ul {
 .section-details {
     padding: 0 20px;
 }
-
+.section-details p.section__para{
+    color: var(--color-blue);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
 .section-heading {
     color: var(--color-blue);
-    font-weight: 100;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 /* card styling */
@@ -183,6 +189,7 @@ li.side-menu {
 
 .timeline-icon {
     color: var(--color-blue);
+    padding-left: 8px;
 }
 
 .education, .experience {

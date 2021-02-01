@@ -177,9 +177,11 @@ export default {
 
 /* extended-option styling */
 .extended-option {
-  display: grid;
-  grid-template-columns: 6fr 6fr;
-  position: relative;
+      display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    gap: 10px;
+    grid-template-rows: 1fr;
 }
 .extended-option p {
   text-align: center;

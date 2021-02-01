@@ -48,7 +48,7 @@ export default {
 }
 
 .company-name {
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0px;
   color: var(--color-blue);
 }
