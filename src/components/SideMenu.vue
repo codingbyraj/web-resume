@@ -10,20 +10,20 @@
         </router-link>
       </li>
       <li class="side-menu">
-        <router-link to="/skills">
-          <div class="menu-icon">
-            <i class="fas fa-adjust"></i>
-          </div>
-          <p class="menu-text">Projects</p>
-        </router-link>
-      </li>
-      <li class="side-menu">
         <router-link to="/profile">
           <div class="menu-icon">
             <i class="fas fa-id-badge"></i>
             <!-- <i class="far fa-id-badge"></i> -->
           </div>
           <p class="menu-text">Profile</p>
+        </router-link>
+      </li>
+      <li class="side-menu">
+        <router-link to="/projects">
+          <div class="menu-icon">
+            <i class="fas fa-adjust"></i>
+          </div>
+          <p class="menu-text">Projects</p>
         </router-link>
       </li>
       <li class="side-menu">
