@@ -1,6 +1,8 @@
 <template>
   <div class="section-details">
-    <h2 class="section-heading">Projects</h2>
+    <h2 class="section-heading">
+      <span>Projects</span>
+    </h2>
   </div>
 </template>
 <script>

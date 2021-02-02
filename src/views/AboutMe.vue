@@ -1,6 +1,8 @@
 <template>
   <div class="section-details">
-    <h2 class="section-heading">About</h2>
+    <h2 class="section-heading">
+      <span>About</span>
+    </h2>
     <div class="about-detail">
       <!-- about me -->
       <div class="about-me">
@@ -18,10 +20,7 @@
           over the world. Below is a quick overview of my main technical skill
           sets and technologies I use. Want to find out more about my experience
           and work? Click
-          <a
-            class="download-resume"
-            :href="cvUrl"
-            download="Abhishek_Raj.pdf"
+          <a class="download-resume" :href="cvUrl" download="Abhishek_Raj.pdf"
             >here
           </a>
           to download my resume.
@@ -32,38 +31,50 @@
         </p> -->
       </div>
       <div class="skillset">
-        <div class="skill" title="JavaScript">
+        <div class="skill">
           <i class="fa-5x skill-icon-js fab fa-js-square"></i>
+          <div class="skill-text">JavaScript</div>
         </div>
-        <div class="skill" title="Angular">
+        <div class="skill">
           <i class="fa-5x skill-icon-angular fab fa-angular"></i>
+          <div class="skill-text">Angular</div>
         </div>
-        <div class="skill" title="Vuejs">
+        <div class="skill">
           <i class="fa-5x skill-icon-vue fab fa-vuejs"></i>
+          <div class="skill-text">Vue JS</div>
         </div>
-        <div class="skill" title="Createjs">
+        <div class="skill">
           <img :src="createjsImgUrl" alt="" />
+          <div class="skill-text">Create JS</div>
         </div>
-        <div class="skill" title="Nodejs">
+        <div class="skill">
           <i class="fa-5x skill-icon-node fab fa-node"></i>
+          <div class="skill-text">Node JS</div>
         </div>
-        <div class="skill" title="NPM">
+        <div class="skill">
           <i class="fa-5x skill-icon-npm fab fa-npm"></i>
+          <div class="skill-text">NPM</div>
         </div>
-        <div class="skill" title="HTML5">
+        <div class="skill">
           <i class="fa-5x skill-icon-html fab fa-html5"></i>
+          <div class="skill-text">HTML 5</div>
         </div>
-        <div class="skill" title="CSS3">
+        <div class="skill">
           <i class="fa-5x skill-icon-css fab fa-css3-alt"></i>
+          <div class="skill-text">CSS 3</div>
         </div>
-        <div class="skill" title="Git">
-          <i class="fa-5x skill-icon-git fas fa-code-branch"></i>
+        <div class="skill">
+          <!-- <i class="fa-5x skill-icon-git fas fa-code-branch"></i> -->
+          <img :src="gitImgUrl" alt="">
+          <div class="skill-text">Git</div>
         </div>
-        <div class="skill" title="MongoDB">
+        <div class="skill">
           <img :src="mongodbImgUrl" alt="" />
+          <div class="skill-text">Mongo DB</div>
         </div>
-        <div class="skill" title="SQL DB">
+        <div class="skill">
           <img :src="sqldbImgUrl" alt="" />
+          <div class="skill-text">SQL</div>
         </div>
       </div>
     </div>
@@ -89,6 +100,7 @@ export default {
       mongodbImgUrl: require("@/assets/images/mongo.png"),
       sqldbImgUrl: require("@/assets/images/sql.png"),
       cvUrl: require("@/assets/resume/Abhishek_Raj.pdf"),
+      gitImgUrl: require("@/assets/images/git.png")
     };
   },
 };
@@ -109,6 +121,9 @@ export default {
 .link {
   cursor: pointer;
   color: var(--color-blue);
+}
+.about-me{
+  margin-bottom: 45px;
 }
 .about-me p {
   text-align: justify;
@@ -145,6 +160,6 @@ export default {
 }
 .skill img {
   width: 5em;
-  height: 5em;
+  height: 4.5em;
 }
 </style>

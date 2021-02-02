@@ -1,6 +1,8 @@
 <template>
   <div class="section-details">
-    <h2 class="section-heading">Contact</h2>
+    <h2 class="section-heading">
+      <span> Contact </span>
+    </h2>
     <div class="contact-info">
       <!-- <form action=""> -->
       <!-- name -->
@@ -54,7 +56,7 @@
       <p>
         Or just drop a
         <i class="fas fa-envelope-open-text mail-icon"></i>
-        mail @ 
+        mail @
         <a class="mail-link" href="mailto:dev@iabhishekraj.in"
           >hey@iabhishekraj.in</a
         >

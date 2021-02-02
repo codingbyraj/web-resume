@@ -1,6 +1,13 @@
 <template>
   <div class="user-card">
-    <div class="user-img"></div>
+    <!-- <div class="user-img"></div> -->
+    <progressive-background
+      class="user-img"
+      :src="cardImage"
+      :placeholder="cardImagePlaceholder"
+      no-ratio
+    />
+
     <div class="bottom-section">
       <div class="title">
         <p>Hi 👋, This is Abhishek Raj</p>
@@ -73,6 +80,8 @@ export default {
       dataPeriod: 1000,
       dataRotate: ["Web Developer.", "Software Engineer."],
       cvUrl: require("../assets/resume/Abhishek_Raj.pdf"),
+      cardImage: require("../assets/images/pic.png"),
+      cardImagePlaceholder: require("../assets/images/pic-placeholder.png"),
     };
   },
   methods: {
@@ -90,6 +99,7 @@ export default {
   bottom: -63%;
   width: 100%;
   height: 70%;
+  z-index: 1;
   background: #fafafa;
   transform: rotate(12deg);
   -webkit-transform: rotate(12deg);
@@ -103,6 +113,7 @@ export default {
   left: auto;
   right: -25%;
   bottom: -63%;
+  z-index: 2;
   width: 100%;
   height: 70%;
   background: #fafafa;
@@ -177,11 +188,11 @@ export default {
 
 /* extended-option styling */
 .extended-option {
-      display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: relative;
-    gap: 10px;
-    grid-template-rows: 1fr;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  gap: 10px;
+  grid-template-rows: 1fr;
 }
 .extended-option p {
   text-align: center;

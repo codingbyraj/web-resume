@@ -1,6 +1,8 @@
 <template>
   <div class="section-details">
-    <h2 class="section-heading">Profile</h2>
+    <h2 class="section-heading">
+      <span>Profile</span>
+    </h2>
     <!-- Experience -->
     <div class="experience">
       <p class="section__para">Experience <i class="timeline-icon fas fa-briefcase"></i></p>
