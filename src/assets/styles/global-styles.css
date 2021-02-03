@@ -64,9 +64,7 @@ ul {
 }
 
 .page_wrap {
-    height: 100vh;
     width: 100%;
-    display: flex;
 }
 
 .wrapper {
@@ -222,8 +220,9 @@ li.side-menu {
     align-items: center;
     justify-content: center;
     text-align: center;
-    grid-row-gap: 25px;
-    margin-bottom: 18px;
+    /* grid-row-gap: 25px; */
+    /* margin-bottom: 18px; */
+    gap: 10px;
 }
 
 .skill-icon {
@@ -274,12 +273,19 @@ li.side-menu {
 /* mobile styling */
 
 @media screen and (min-width: 300px) and (max-width: 640px) {
+   
     .wrapper {
         width: 95%;
         grid-template-columns: 12fr;
     }
     .menu {
         margin-bottom: 2px;
+    }
+    .card{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
     }
     #sidebar {
         margin: 0;
@@ -321,8 +327,9 @@ li.side-menu {
     }
     .details {
         border-radius: 0;
-        height: unset;
-        overflow-y: unset;
+        height: auto;
+        overflow-y: auto;
+        margin-bottom: 10px;
     }
     .timeline__wrapper {
         margin-left: 14px;
@@ -348,14 +355,23 @@ li.side-menu {
     /* 640 - 767  */
     .wrapper {
         width: 80%;
-        grid-template-columns: 12fr;
+        grid-template-columns: 1fr;
     }
     .menu {
         margin-bottom: 2px;
+        /* position: fixed; */
+        z-index: 5;
+        height: 85px;
+    }
+    .card{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
     }
     #sidebar {
         margin: 0;
-        margin-bottom: 80px;
+        /* margin-bottom: 80px; */
         border-radius: 0;
     }
     #sidebar>ul {
@@ -397,8 +413,9 @@ li.side-menu {
     }
     .details {
         border-radius: 0;
-        height: unset;
-        overflow-y: unset;
+        height: auto;
+        overflow-y: auto;
+        margin-bottom: 10px;
     }
 }
 
