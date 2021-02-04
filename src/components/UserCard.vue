@@ -52,7 +52,7 @@
       </div>
 
       <!-- download cv / contact me option -->
-      <div class="extended-option">
+      <div class="extended-option" id="extended-details">
         <div class="extended-detail cv">
           <p>
             Download CV <i class="fas fa-cloud-download-alt"></i>

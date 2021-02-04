@@ -38,6 +38,10 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
 }
 
+.side-menu>a.active {
+    color: var(--color-parrot);
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -167,18 +171,18 @@ li.side-menu {
     text-align: center;
     border-radius: 5px;
     margin-bottom: 15px;
-  }
-  .project__name {
+}
+
+.project__name {
     color: var(--color-parrot);
     text-align: left;
     margin: 8px 0px;
-  }
-  p.project__domain,
-  p.project__tech,
-  .project__desc > p {
+}
+
+p.project__domain, p.project__tech, .project__desc>p {
     text-align: justify;
     margin: 10px 0;
-  }
+}
 
 /* card styling */
 
@@ -342,6 +346,9 @@ li.side-menu {
     .user-card {
         box-shadow: none;
     }
+    .skill-text {
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 640px) and (max-width: 992px) {
@@ -399,6 +406,9 @@ li.side-menu {
         border-radius: 0;
         height: unset;
         overflow-y: unset;
+    }
+    .skill-text {
+        opacity: 1;
     }
 }
 
