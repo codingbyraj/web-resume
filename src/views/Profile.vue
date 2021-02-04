@@ -46,6 +46,7 @@ export default {
           TileLine: "Present",
           Information: [
             "Tenure : April 2020 - Present",
+            "Team size - 8",
             "I am working in the project called Brainingcamp. The Brainingcamp is an application which helps student as well as teachers to learn and teach mathematics in a new and interesting way.",
             "My role is to design and develop the manipulatives in the application.",
           ],
@@ -57,6 +58,7 @@ export default {
           TileLine: "2020",
           Information: [
             "Tenure : January 2018 - March 2020",
+            "Team size - 5",
             "The project was a kind of order management system that was responsible to calculate the price of selected items by the user.",
             "My role was to design and develop the new features in the application.",
           ],

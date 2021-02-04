@@ -34,6 +34,5 @@ export default new Router({
             path: "*",
             redirect: "/"
         }
-    ],
-    linkExactActiveClass: "active"
+    ]
 });

@@ -8,9 +8,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import VueProgressiveImage from 'vue-progressive-image';
-import VuePageTransition from 'vue-page-transition'
-const VueScrollTo = require('vue-scrollto'); 
+import VueProgressiveImage from 'vue-progressive-image'
+
 
 library.add(fas);
 library.add(fab);
@@ -21,9 +20,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueProgressiveImage, {
   blur: 10
 });
-Vue.use(VueScrollTo);
 Vue.config.productionTip = false;
-Vue.use(VuePageTransition);
 
 new Vue({
   router,
