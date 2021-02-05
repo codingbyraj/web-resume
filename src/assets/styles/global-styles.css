@@ -38,6 +38,10 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
 }
 
+.side-menu>a.active {
+    color: var(--color-parrot);
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -64,8 +68,8 @@ ul {
 }
 
 .page_wrap {
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     display: flex;
 }
 
@@ -156,6 +160,10 @@ li.side-menu {
     background: radial-gradient( ellipse at right, #ddd 0%, rgba(255, 255, 255, 0) 70%);
 }
 
+.side-menu .menu-icon:hover {
+    color: var(--color-parrot);
+}
+
 .menu-text {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -167,18 +175,18 @@ li.side-menu {
     text-align: center;
     border-radius: 5px;
     margin-bottom: 15px;
-  }
-  .project__name {
+}
+
+.project__name {
     color: var(--color-parrot);
     text-align: left;
     margin: 8px 0px;
-  }
-  p.project__domain,
-  p.project__tech,
-  .project__desc > p {
+}
+
+p.project__domain, p.project__tech, .project__desc>p {
     text-align: justify;
     margin: 10px 0;
-  }
+}
 
 /* card styling */
 
@@ -222,8 +230,7 @@ li.side-menu {
     align-items: center;
     justify-content: center;
     text-align: center;
-    grid-row-gap: 25px;
-    margin-bottom: 18px;
+    gap: 10px;
 }
 
 .skill-icon {
@@ -274,12 +281,25 @@ li.side-menu {
 /* mobile styling */
 
 @media screen and (min-width: 300px) and (max-width: 640px) {
+    .page_wrap {
+        height: 100%;
+        display: block;
+    }
     .wrapper {
         width: 95%;
         grid-template-columns: 12fr;
     }
     .menu {
-        margin-bottom: 2px;
+        margin-bottom: 10px;
+        /* position: fixed; */
+        z-index: 5;
+        height: 80px;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
     }
     #sidebar {
         margin: 0;
@@ -295,9 +315,6 @@ li.side-menu {
         left: 0;
         z-index: 11;
         background: white;
-    }
-    .menu-icon {
-        /* display: inline-block; */
     }
     .menu-text {
         padding-bottom: 0;
@@ -319,10 +336,14 @@ li.side-menu {
     .user-img {
         border-radius: 0;
     }
+    .section-details {
+        padding: 0px;
+    }
     .details {
         border-radius: 0;
-        height: unset;
-        overflow-y: unset;
+        height: auto;
+        overflow-y: auto;
+        margin-bottom: 10px;
     }
     .timeline__wrapper {
         margin-left: 14px;
@@ -342,20 +363,36 @@ li.side-menu {
     .user-card {
         box-shadow: none;
     }
+    .skill-text {
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 640px) and (max-width: 992px) {
     /* 640 - 767  */
+    .page_wrap {
+        height: 100%;
+        display: block;
+    }
     .wrapper {
         width: 80%;
-        grid-template-columns: 12fr;
+        grid-template-columns: 1fr;
     }
     .menu {
-        margin-bottom: 2px;
+        margin-bottom: 10px;
+        /* position: fixed; */
+        z-index: 5;
+        height: 80px;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
     }
     #sidebar {
         margin: 0;
-        margin-bottom: 80px;
+        /* margin-bottom: 80px; */
         border-radius: 0;
     }
     #sidebar>ul {
@@ -367,9 +404,6 @@ li.side-menu {
         left: 0;
         z-index: 11;
         background: white;
-    }
-    .menu-icon {
-        /* display: inline-block; */
     }
     .menu-text {
         padding-bottom: 0;
@@ -397,8 +431,12 @@ li.side-menu {
     }
     .details {
         border-radius: 0;
-        height: unset;
-        overflow-y: unset;
+        height: auto;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+    .skill-text {
+        opacity: 1;
     }
 }
 

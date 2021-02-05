@@ -52,12 +52,15 @@
       </div>
 
       <!-- download cv / contact me option -->
-      <div class="extended-option">
+      <div class="extended-option" id="extended-info">
         <div class="extended-detail cv">
-          <p>
-            Download CV <i class="fas fa-cloud-download-alt"></i>
-            <a :href="cvUrl" download="Abhishek_Raj.pdf"> </a>
-          </p>
+          <a :href="cvUrl" download="Abhishek_Raj.pdf">
+            <p>
+              <span>
+                Download CV <i class="fas fa-cloud-download-alt"></i>
+              </span>
+            </p>
+          </a>
         </div>
         <div class="extended-detail contact-me" @click="goToContact">
           <p>

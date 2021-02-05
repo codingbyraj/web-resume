@@ -6,9 +6,9 @@
     <div class="card">
       <UserCard />
     </div>
-    <div class="details">
+    <vue-page-transition class="details" name="fade-in-right">
       <router-view />
-    </div>
+    </vue-page-transition>
   </div>
 </template>
 <script>

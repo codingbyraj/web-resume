@@ -1,7 +1,7 @@
 <template>
   <div id="sidebar">
     <ul>
-      <li class="side-menu">
+      <li class="side-menu" v-scroll-to="'#extended-info'">
         <router-link to="/">
           <div class="menu-icon">
             <i class="fas fa-user"></i>
@@ -9,7 +9,7 @@
           </div>
         </router-link>
       </li>
-      <li class="side-menu">
+      <li class="side-menu" v-scroll-to="'#extended-info'">
         <router-link to="/profile">
           <div class="menu-icon">
             <i class="fas fa-id-badge"></i>
@@ -18,15 +18,15 @@
           </div>
         </router-link>
       </li>
-      <li class="side-menu">
+      <li class="side-menu" v-scroll-to="'#extended-info'">
         <router-link to="/projects">
           <div class="menu-icon">
-            <i class="fas fa-adjust"></i>
+            <i class="fas fa-tasks"></i>
             <p class="menu-text">Projects</p>
           </div>
         </router-link>
       </li>
-      <li class="side-menu">
+      <li class="side-menu" v-scroll-to="'#extended-info'">
         <router-link to="/contact">
           <div class="menu-icon">
             <i class="fas fa-paper-plane"></i>
@@ -43,5 +43,4 @@ export default {
 };
 </script>
 <style scoped>
-
 </style>
