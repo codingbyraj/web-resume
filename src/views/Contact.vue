@@ -37,7 +37,7 @@
       <div class="row">
         <div class="form-group">
           <p class="contact-heading">Type your message</p>
-          <textarea name="" id="" class="form-control" rows="5"></textarea>
+          <textarea name="" id="" class="form-control" rows="6"></textarea>
         </div>
       </div>
 
@@ -57,8 +57,8 @@
         Or just drop a
         <i class="fas fa-envelope-open-text mail-icon"></i>
         mail @
-        <a class="mail-link" href="mailto:dev@iabhishekraj.in"
-          >hey@iabhishekraj.in</a
+        <a class="mail-link" href="mailto:rai.abhishekraj.gmail.com"
+          >rai.abhishekraj.gmail.com</a
         >
       </p>
     </div>
@@ -94,8 +94,9 @@ export default {
 }
 
 .form-control {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   width: 100%;
+  font-size: 16px;
   padding: 0.375rem 0.25rem;
   line-height: 1.5;
   border: 1px solid #ced4da;
