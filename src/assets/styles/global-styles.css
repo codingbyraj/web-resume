@@ -418,7 +418,7 @@ p.project__domain, p.project__tech, .project__desc>p {
 @media screen and (min-width: 1181px) and (max-width: 1380px) {
     /* 1200 - 1380 */
     .wrapper {
-        width: 80%;
+        width: 90%;
         grid-template-columns: 90px 5fr 7fr;
     }
 }
