@@ -7,9 +7,9 @@
       {{ TimeLineDetail.Title }}
     </p>
     <div class="job-info">
-      <div>
+      <p>
         {{ TimeLineDetail.TileLine }}
-      </div>
+      </p>
     </div>
 
     <ul class="timeline-description">
@@ -45,6 +45,10 @@ export default {
   position: absolute;
   left: -125px;
   top: 0;
+}
+.job-info > p {
+  margin: 0;
+  color: var(--color-blue);
 }
 
 .company-name {

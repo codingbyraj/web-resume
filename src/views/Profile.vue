@@ -46,7 +46,7 @@ export default {
           TileLine: "Present",
           Information: [
             "Tenure : April 2020 - Present",
-            "I am working in the project called Brainingcamp. The Brainingcamp is an application which helps student as well as teachers to learn and teach mathematics in a new and interesting way.",
+            "I am working in e-Learning application. The application helps student as well as teachers to learn and teach mathematics in a new and interesting way.",
             "My role is to design and develop the manipulatives in the application.",
           ],
         },
