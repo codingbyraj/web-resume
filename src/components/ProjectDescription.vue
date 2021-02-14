@@ -21,12 +21,12 @@ export default {
   name: "ProjectDescription",
   props: ["data"],
   computed: {
-    imageUrl: function () {
-      return require("@/assets/project-images/" + this.data.image.img);
-    },
-    placeholderUrl:function(){
-        return require("@/assets/project-images/" + this.data.image.placeholder);
-    }
+    // imageUrl: function () {
+    //   return require("@/assets/project-images/" + this.data.image.img);
+    // },
+    // placeholderUrl:function(){
+    //     return require("@/assets/project-images/" + this.data.image.placeholder);
+    // }
   },
 };
 </script>

@@ -5,6 +5,7 @@
     </h2>
     <ProjectDescription :data="eLearning" />
     <ProjectDescription :data="orderManagementSystem" />
+    <ProjectDescription :data="chatbot" />
   </div>
 </template>
 <script>
@@ -25,10 +26,10 @@ export default {
           "Team Size: 8",
         ],
         technologies: ["Create.js", "Node.js", "Express.js", "Vue.js"],
-        image: {
-          img: "e-learning.gif",
-          placeholder: "e-learning-placeholder.jpg",
-        },
+        //  image: {
+        //   img: "e-learning.gif",
+        //   placeholder: "e-learning-placeholder.jpg",
+        // },
       },
       orderManagementSystem: {
         name: "Order Management System",
@@ -38,6 +39,14 @@ export default {
           "Team Size: 5",
         ],
         technologies: ["C#", "MS SQL Serve"],
+      },
+      chatbot: {
+        name: "Order Food",
+        domain: "Order Management System",
+        description: [
+          "It is a chatbot application which is responsible for showing the list of meals available and the user will be able to order the food using the application.",
+        ],
+        technologies:["Node.js", "Express.js"]
       },
     };
   },

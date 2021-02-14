@@ -9,35 +9,44 @@
         <div class="row name">
           <div
             class="form-group"
-            :class="{ 'form-group--error': $v.fName.$error }"
+            :class="{ 'form-group--error': $v.formData.firstName.$error }"
           >
             <p class="contact-heading">First Name</p>
             <input
-              v-model.trim="$v.fName.$model"
+              v-model.trim="$v.formData.firstName.$model"
               type="text"
               autocomplete="off"
               class="form-control"
             />
-            <span class="error" v-if="$v.fName.$dirty && !$v.fName.required"
-              >First Name is required</span
+            <span
+              class="error"
+              v-if="
+                $v.formData.firstName.$dirty && !$v.formData.firstName.required
+              "
+              >First Name cannot be blank</span
             >
-            <span class="error" v-if="$v.fName.$dirty && !$v.fName.minLength"
+            <span
+              class="error"
+              v-if="
+                $v.formData.firstName.$dirty && !$v.formData.firstName.minLength
+              "
               >First Name must have at least
-              {{ $v.fName.$params.minLength.min }} characters.</span
+              {{ $v.formData.firstName.$params.minLength.min }}
+              characters.</span
             >
           </div>
 
           <!-- last name -->
           <div
             class="form-group"
-            :class="{ 'form-group--error': $v.lName.$error }"
+            :class="{ 'form-group--error': $v.formData.lastName.$error }"
           >
             <p class="contact-heading">Last Name</p>
             <input
               type="text"
               class="form-control"
               autocomplete="off"
-              v-model.trim="$v.lName.$model"
+              v-model.trim="$v.formData.lastName.$model"
             />
           </div>
         </div>
@@ -46,20 +55,24 @@
         <div class="row">
           <div
             class="form-group"
-            :class="{ 'form-group--error': $v.email.$error }"
+            :class="{ 'form-group--error': $v.formData.email.$error }"
           >
             <p class="contact-heading">Email</p>
             <input
               type="email"
               class="form-control"
               autocomplete="off"
-              v-model.trim="$v.email.$model"
+              v-model.trim="$v.formData.email.$model"
             />
-            <span class="error" v-if="$v.email.$dirty && !$v.email.required"
-              >Email is required</span
+            <span
+              class="error"
+              v-if="$v.formData.email.$dirty && !$v.formData.email.required"
+              >Email cannot be required</span
             >
-            <span class="error" v-if="$v.email.$dirty && !$v.email.email"
-              >Email format is not correct.</span
+            <span
+              class="error"
+              v-if="$v.formData.email.$dirty && !$v.formData.email.email"
+              >Email format is not correct</span
             >
           </div>
         </div>
@@ -68,25 +81,27 @@
         <div class="row">
           <div
             class="form-group"
-            :class="{ 'form-group--error': $v.mobile.$error }"
+            :class="{ 'form-group--error': $v.formData.mobile.$error }"
           >
             <p class="contact-heading">Contact Number</p>
             <input
               type="number"
               class="form-control"
               autocomplete="off"
-              v-model.trim="$v.mobile.$model"
+              v-model.trim="$v.formData.mobile.$model"
             />
-            <span class="error" v-if="$v.mobile.$dirty && !$v.mobile.required"
-              >Mobile number is required</span
+            <span
+              class="error"
+              v-if="$v.formData.mobile.$dirty && !$v.formData.mobile.required"
+              >Your contact number is not correct</span
             >
             <span
               class="error"
               v-if="
-                $v.mobile.$dirty &&
-                (!$v.mobile.minLength || !$v.mobile.maxLength)
+                $v.formData.mobile.$dirty &&
+                (!$v.formData.mobile.minLength || !$v.formData.mobile.maxLength)
               "
-              >Mobile number 10 digit</span
+              >Enter 10-digit contact number</span
             >
           </div>
         </div>
@@ -95,7 +110,7 @@
         <div class="row">
           <div
             class="form-group"
-            :class="{ 'form-group--error': $v.message.$error }"
+            :class="{ 'form-group--error': $v.formData.message.$error }"
           >
             <p class="contact-heading">Type your message</p>
             <textarea
@@ -103,19 +118,21 @@
               id=""
               class="form-control"
               rows="6"
-              v-model.trim="$v.message.$model"
+              v-model.trim="$v.formData.message.$model"
             ></textarea>
-            <span class="error" v-if="$v.message.$dirty && !$v.message.required"
-              >Your message is blank</span
+            <span
+              class="error"
+              v-if="$v.formData.message.$dirty && !$v.formData.message.required"
+              >Your message cannot be blank</span
             >
             <span
               class="error"
               v-if="
-                $v.message.$dirty &&
-                !$v.message.minLength &&
-                !$v.message.maxLength
+                $v.formData.message.$dirty &&
+                !$v.formData.message.minLength &&
+                !$v.formData.message.maxLength
               "
-              >Your message must have atleast 10 characters.</span
+              >Message is too short. It should be atleast 10 characters.</span
             >
           </div>
         </div>
@@ -127,7 +144,8 @@
               Submit
               <!-- <i class="btn-loader fas fa-arrow-right"></i> -->
               <!-- <img class="btn-loader" :src="loaderImgUrl" alt="" /> -->
-              </button>
+            </button>
+            <span class="mailstatus">{{ mailStatus }}</span>
           </div>
         </div>
       </form>
@@ -149,6 +167,7 @@ import {
   required,
   minLength,
   maxLength,
+  numeric,
   email,
 } from "vuelidate/lib/validators";
 
@@ -156,57 +175,75 @@ export default {
   name: "Contact",
   data() {
     return {
-      fName: "",
-      lName: "",
-      email: "",
-      mobile: "",
-      message: "",
+      formData: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        message: "",
+      },
       showLoader: false,
       loaderImgUrl: require("@/assets/images/loader.gif"),
+      mailStatus: "",
     };
   },
   components: {},
   validations: {
-    fName: {
-      required,
-      minLength: minLength(3),
-    },
-    lName: {
-      default: "",
-    },
-    email: {
-      required,
-      email,
-    },
-    mobile: {
-      required,
-      minLength: minLength(10),
-      maxLength: maxLength(10),
-    },
-    message: {
-      required,
-      minLength: minLength(10),
+    formData: {
+      firstName: {
+        required,
+        minLength: minLength(3),
+      },
+      lastName: {
+        default: "",
+      },
+      email: {
+        required,
+        email,
+      },
+      mobile: {
+        required,
+        numeric,
+        minLength: minLength(10),
+        maxLength: maxLength(10),
+      },
+      message: {
+        required,
+        minLength: minLength(10),
+      },
     },
   },
   methods: {
     submitForm() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
-        console.log("Submitted");
         this.showLoader = true;
-        this.clearAllFields();
+        const requestOptions = {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(this.formData),
+        };
+        fetch("../user/sendmail", requestOptions)
+          .then((response) => response.json())
+          .then((data) => {
+            this.mailStatus = data.message;
+            this.showLoader = false;
+            this.clearAllFields();
+          })
+          .catch((error) => {
+            this.mailStatus = error;
+          });
       }
     },
     clearAllFields() {
-      window.setTimeout(() => {
-        this.$v.$reset();
-        this.fName = "";
-        this.lName = "";
-        this.email = "";
-        this.mobile = "";
-        this.message = "";
-        this.showLoader = false;
-      }, 1000);
+      setTimeout(() => {
+        this.mailStatus = "";
+      }, 5000);
+      this.$v.$reset();
+      for (let key in this.formData) {
+        this.formData[key] = "";
+      }
+      this.showLoader = false;
     },
   },
 };
@@ -278,6 +315,7 @@ textarea {
   display: inline-block;
   border: none;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .btn-submit:hover {
@@ -290,6 +328,11 @@ textarea {
   color: white;
   height: 30px;
   width: 30px;
+}
+
+.mailstatus {
+  color: var(--color-parrot);
+  font-style: italic;
 }
 
 @keyframes arrow-move {
@@ -331,6 +374,7 @@ textarea {
 .error {
   color: red;
   font-size: 12px;
+  display: block;
   position: absolute;
 }
 </style>

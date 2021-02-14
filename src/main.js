@@ -34,4 +34,4 @@ new Vue({
   render: h => h(App),
 }).$mount('#app');
 
-console.log("Hi, \n\nI would love to connect with you. \nJust drop your message at 'hey@iabhishekraj.in' if you wanna share a cup of tea with me.\n\nThanks,\nAbhishek Raj");
+console.log("Hi, \n\nI would love to connect with you. \nJust drop your message at 'rai.abhishekraj@gmail.com', if you wanna share a cup of tea with me.\n\nThanks,\nAbhishek Raj");
