@@ -153,9 +153,8 @@
     <!-- mail -->
     <div class="mail-me">
       <p>
-        Or just drop a
-        <i class="fas fa-envelope-open-text mail-icon"></i> @
-        <a class="mail-link" href="mailto:rai.abhishekraj.gmail.com"
+        Or just drop me a
+        <i class="fas fa-envelope-open-text mail-icon"></i> at <a class="mail-link" href="mailto:rai.abhishekraj.gmail.com"
           >rai.abhishekraj@gmail.com</a
         >
       </p>
@@ -238,7 +237,7 @@ export default {
     clearAllFields() {
       setTimeout(() => {
         this.mailStatus = "";
-      }, 5000);
+      }, 3000);
       this.$v.$reset();
       for (let key in this.formData) {
         this.formData[key] = "";
