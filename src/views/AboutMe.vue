@@ -8,8 +8,7 @@
       <div class="about-me">
         <p>
           I'm Abhishek Raj, Software Developer from Delhi, India, specialised in
-          frontend and backend development for complex scalable web apps. I
-          write about software development on my blog.
+          frontend and backend development for complex scalable web apps.
         </p>
         <p>
           Academically speaking, I hold a masters degree in Computer Science.
