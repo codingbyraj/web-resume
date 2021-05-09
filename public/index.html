@@ -17,19 +17,28 @@
       margin: 0;
       padding: 0;
     }
-    #app{
-      text-align: center;
-      padding-top: 100px;
+
+    .loader-wrapper {
+      height: 100vh;
+      position: relative;
+    }
+
+    .loader-wrapper>img {
+      position: absolute;
+      top: calc(50% - 39px);
+      left: calc(50% - 39px);
     }
   </style>
 </head>
 
 <body>
   <noscript>
-    <strong>Don't try to be oversmart! Enable the JavaScript to browse the website.</strong>
+    <strong>Don't try to be oversmart! Enable your browser's JavaScript to see the web resume of Abhishek Raj.</strong>
   </noscript>
   <div id="app">
-    <img src="loader.gif" alt="loader not available">
+    <div class="loader-wrapper">
+      <img src="loader.gif" alt="loader not available">
+    </div>
   </div>
   <!-- built files will be auto injected -->
 </body>
