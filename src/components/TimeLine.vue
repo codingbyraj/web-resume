@@ -1,8 +1,17 @@
 <template>
   <div class="item">
-    <h4 class="company-name">
-      {{ TimeLineDetail.CompanyName }}
-    </h4>
+    <a :href="TimeLineDetail.website" target="_blank">
+      <div class="name-and-logo">
+        <img
+          :src="require(`../assets/images/${TimeLineDetail.logoImage}`)"
+          class="company-logo"
+          alt=""
+        />
+        <h4 class="company-name">
+          {{ TimeLineDetail.CompanyName }}
+        </h4>
+      </div>
+    </a>
     <p class="title">
       {{ TimeLineDetail.Title }}
     </p>
@@ -28,6 +37,7 @@ export default {
 <style>
 .item {
   position: relative;
+  margin-bottom: 16px;
 }
 .item::before {
   content: "";
@@ -44,17 +54,26 @@ export default {
 .job-info {
   position: absolute;
   left: -125px;
-  top: 0;
+  top: -5px;
 }
 .job-info > p {
   margin: 0;
   color: var(--color-blue);
 }
-
+.name-and-logo {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 4px;
+}
+.name-and-logo > img {
+  width: 24px;
+  height: 24px;
+}
 .company-name {
   font-weight: 600;
-  margin-bottom: 0px;
   color: var(--color-blue);
+  margin: 0;
 }
 .title {
   color: var(--color-parrot);

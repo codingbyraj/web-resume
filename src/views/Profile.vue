@@ -42,6 +42,8 @@ export default {
         {
           id: 0,
           CompanyName: "Taazaa Tech Pvt. Ltd.",
+          logoImage: "taazaa-logo.png",
+          website:"http://www.taazaa.com/",
           Title: "Software Developer",
           TileLine: "Present",
           Information: [
@@ -53,6 +55,8 @@ export default {
         {
           id: 1,
           CompanyName: "Nagarro",
+          logoImage: "nagarro-logo.png",
+          website:"https://www.nagarro.com/",
           Title: "Associate, Technology",
           TileLine: "2020",
           Information: [
@@ -66,6 +70,8 @@ export default {
         {
           id: 0,
           CompanyName: "G. G. S. Indraprastha University",
+          website:"http://www.ipu.ac.in/",
+          logoImage: "ipu-logo.png",
           Title: "Post Graduation",
           TileLine: "2018",
           Information: ["Tenure : 2015 - 2018"],
@@ -73,6 +79,8 @@ export default {
         {
           id: 1,
           CompanyName: "Punjab Technical University",
+          website:"https://ptu.ac.in/",
+          logoImage: "ptu-logo.png",
           Title: "Graduation",
           TileLine: "2014",
           Information: ["Tenure : 2011 - 2014"],
