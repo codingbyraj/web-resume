@@ -13,7 +13,6 @@
         <router-link to="/profile">
           <div class="menu-icon">
             <i class="fas fa-id-badge"></i>
-            <!-- <i class="far fa-id-badge"></i> -->
             <p class="menu-text">Profile</p>
           </div>
         </router-link>

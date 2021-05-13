@@ -84,5 +84,6 @@ export default {
   padding: 6px 0;
   font-size: 16px;
   line-height: 1.5em;
+  text-align: justify;
 }
 </style>

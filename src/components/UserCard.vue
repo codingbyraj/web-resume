@@ -62,7 +62,7 @@
             </p>
           </a>
         </div>
-        <div class="extended-detail contact-me" @click="goToContact">
+        <div class="extended-detail contact-me" @click="goToContact" v-scroll-to="'#extended-info'">
           <p>
             <span> Contact Me <i class="fas fa-paper-plane"></i> </span>
           </p>
