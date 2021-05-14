@@ -60,21 +60,6 @@ export default {
   margin: 0;
   color: var(--color-blue);
 }
-.name-and-logo {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  grid-template-rows: 1fr;
-  margin-bottom: 4px;
-}
-.name-and-logo > img {
-  width: 24px;
-  height: 24px;
-}
-.company-name {
-  font-weight: 600;
-  color: var(--color-blue);
-  margin: 0;
-}
 .title {
   color: var(--color-parrot);
   margin: 2px 0;

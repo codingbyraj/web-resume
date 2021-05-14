@@ -288,9 +288,36 @@ p.project__domain, p.project__tech, .project__desc>p {
     width: 300px​!important;
 }
 
+.name-and-logo {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-and-logo>img {
+    width: 24px;
+    height: 24px;
+}
+
+h4.company-name {
+    font-weight: 600;
+    color: var(--color-blue);
+    margin: 0;
+    font-size: 16px;
+}
+
 /* media query */
 
 /* mobile styling */
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    h4.company-name {
+        font-size: 13px;
+    }
+}
+
 
 @media screen and (min-width: 300px) and (max-width: 640px) {
     .wrapper {
@@ -299,15 +326,8 @@ p.project__domain, p.project__tech, .project__desc>p {
     #sidebar {
         margin-bottom: 80px;
     }
-    
     .section-details {
         padding: 0px;
-    }
-    .timeline__wrapper {
-        margin-left: 14px;
-    }
-    .job-info {
-        position: static;
     }
     .skillset {
         display: grid;
@@ -320,6 +340,15 @@ p.project__domain, p.project__tech, .project__desc>p {
     }
 }
 
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .job-info {
+        position: static;
+    }
+    .timeline__wrapper {
+        margin-left: 14px;
+    }
+}
+
 @media screen and (min-width: 641px) and (max-width: 992px) {
     /* 640 - 767  */
     .wrapper {
@@ -328,10 +357,9 @@ p.project__domain, p.project__tech, .project__desc>p {
     .skillset {
         grid-template-columns: repeat(3, 4fr);
     }
-
 }
 
-@media screen and (min-width: 300px) and (max-width: 992px){
+@media screen and (min-width: 300px) and (max-width: 992px) {
     .page_wrap {
         height: 100%;
         display: block;
@@ -339,7 +367,6 @@ p.project__domain, p.project__tech, .project__desc>p {
     .wrapper {
         grid-template-columns: 1fr;
     }
-
     .menu {
         margin-bottom: 10px;
         /* position: fixed; */
@@ -405,10 +432,10 @@ p.project__domain, p.project__tech, .project__desc>p {
     .user-img {
         height: 46vh !important;
     }
-    .details{
+    .details {
         height: 67%;
     }
-    .title p{
+    .title p {
         font-size: 20px;
     }
 }
