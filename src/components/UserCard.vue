@@ -83,8 +83,8 @@ export default {
       dataPeriod: 1000,
       dataRotate: ["Web Developer.", "Software Engineer."],
       cvUrl: require("../assets/resume/Abhishek_Raj.pdf"),
-      cardImage: require("../assets/images/pic.png"),
-      cardImagePlaceholder: require("../assets/images/pic-placeholder.png"),
+      cardImage: require("../assets/images/newpic.png"),
+      cardImagePlaceholder: require("../assets/images/newpic-placeholder.png"),
     };
   },
   methods: {

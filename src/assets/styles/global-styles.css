@@ -203,14 +203,13 @@ p.project__domain, p.project__tech, .project__desc>p {
     border-radius: 5px 5px 0 0;
     position: relative;
     overflow: hidden;
-    /* background: #c5cae9 url(../images/pic.png) no-repeat center 0; */
-    background: #c5cae9;
+    background: #e1e1e1;
     width: 100%;
     height: 50vh !important;
 }
 
 .progressive-background-image, .progressive-background-placeholder {
-    height: 116% !important;
+    height: 100% !important;
     background-size: contain !important;
     z-index: 0 !important;
 }

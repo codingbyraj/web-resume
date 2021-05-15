@@ -132,7 +132,7 @@
                 !$v.formData.message.minLength &&
                 !$v.formData.message.maxLength
               "
-              >Message is too short. It should be atleast 10 characters.</span
+              >Message is too short.</span
             >
           </div>
         </div>
