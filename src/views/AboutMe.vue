@@ -15,7 +15,7 @@
         </p>
         <h4 class="head2">What I do</h4>
         <p>
-          I have more than 3 years' experience building software for clients all
+          I have more than 6 years' experience building software for clients all
           over the world. Below is a quick overview of my main technical skill
           sets and technologies I use. Want to find out more about my experience
           and work? Click
