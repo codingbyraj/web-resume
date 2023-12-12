@@ -44,7 +44,7 @@ export default {
           CompanyName: "Taazaa Tech Pvt. Ltd.",
           logoImage: "taazaa-logo.png",
           website:"http://www.taazaa.com/",
-          Title: "Software Developer",
+          Title: "Senior Software Engineer",
           TileLine: "Present",
           Information: [
             "Tenure : April 2020 - Present",
